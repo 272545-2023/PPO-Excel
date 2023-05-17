@@ -1,0 +1,8 @@
+arkusz
+- dane tekstowe i liczbowe
+- mozliwosc rozszerzania arkusza (wiersze i kolumny)
+to na 30V
+- wykonywanie operacji na zakresach komorek:
+- - suma i srednia
+-odczyt i zapisywanie wartosci z dysku
+to na 13VI

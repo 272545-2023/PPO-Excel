@@ -15,6 +15,9 @@ int main(){
 
     sheet.print();
 
+    cout << "______________" << endl;
+
+
     sheet.addColumn();
 
     sheet.setValue(0, 2, "Goodbye");
@@ -28,7 +31,7 @@ int main(){
 
     sheet.addRow();
 
-
+cout << "______________" << endl;
 
     sheet.setValue(3, 1, 5.5);
 
@@ -37,10 +40,12 @@ int main(){
 
     sheet.deleteRow(1);
 
+    cout << "______________" << endl;
+
 
     sheet.print();
 
-    cout << sheet.getValueAsString(0, 0) << endl;
+    cout << "Dotarlem do konca" << endl;
 
     return 0;
 }

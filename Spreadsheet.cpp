@@ -74,90 +74,57 @@ float Spreadsheet::getValueAsFloat(int row, int col) const
     return 0.0f; // Wartość domyślna, gdy komórka nie istnieje
 }
 
+//write method for printing the spreadsheet bith in string and float
+
 void Spreadsheet::print() const
 {
-    if (cells.empty())
+    for (int i = 0; i < cells.size(); i++)
     {
-        std::cout << "Empty spreadsheet" << std::endl;
-        return;
-    }
-
-    // Print the top border
-    std::cout << "+";
-    for (int i = 0; i < cells[0].size(); i++)
-    {
-        std::cout << "------";
-    }
-    std::cout << std::endl;
-
-    // Print the data
-    for (int row = 0; row < cells.size(); row++)
-    {
-        std::cout << "|";
-        for (int col = 0; col < cells[row].size(); col++)
+        for (int j = 0; j < cells[i].size(); j++)
         {
-            std::cout << " ";
-            if (cells[row][col] != nullptr)
-            {
-                std::cout << cells[row][col]->getValueAsString();
-            }
-            else
-            {
-                std::cout << " ";
-            }
-            std::cout << " |";
-        }
-        std::cout << std::endl;
-
-        // Print the line below
-        std::cout << "+";
-        for (int i = 0; i < cells[row].size(); i++)
-        {
-            //set the length of the cell to size of content in the cell
-            for (int j = 0; j < cells[row][i]->getValueAsString().length(); j++)
-            {
-                std::cout << "-";
-            }
-
-            std::cout << "------";
+            std::cout << getValueAsString(i, j) << "\t";
         }
         std::cout << std::endl;
     }
+}
 
+
+//write method for adding and deleting rows and columns
+
+void Spreadsheet::addRow()
+{
+    //add a new row to the end of the spreadsheet
+    cells.resize(cells.size() + 1);
+}
+
+void Spreadsheet::addColumn()
+{
+    //add a new column to the end of the spreadsheet
+    for (int i = 0; i < cells.size(); i++)
+    {
+        cells[i].resize(cells[i].size() + 1, nullptr);
+    }
 }
 
 void Spreadsheet::deleteRow(int row)
 {
+    //delete a row from the spreadsheet
     if (row < cells.size())
     {
-        for (auto cell : cells[row])
-        {
-            delete cell;
-        }
         cells.erase(cells.begin() + row);
     }
 }
 
 void Spreadsheet::deleteColumn(int col)
 {
-    if (!cells.empty() && col < cells[0].size())
+    //delete a column from the spreadsheet
+    if (col < cells[0].size())
     {
-        for (auto &row : cells)
+        for (int i = 0; i < cells.size(); i++)
         {
-            delete row[col];
-            row.erase(row.begin() + col);
+            cells[i].erase(cells[i].begin() + col);
         }
     }
-}
-
-void Spreadsheet::addRow()
-{
-    cells.emplace_back();
-}
-
-void Spreadsheet::addColumn()
-{
-    
 }
 
 std::string Spreadsheet::getCellType(int row, int col) const

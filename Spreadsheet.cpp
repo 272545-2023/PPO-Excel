@@ -82,9 +82,9 @@ void Spreadsheet::print() const
     {
         for (int j = 0; j < cells[i].size(); j++)
         {
-            std::cout << getValueAsString(i, j) << "\t";
+            std::cout << getValueAsString(i, j) << "\t\t";
         }
-        std::cout << std::endl;
+        std::cout << std::endl << std::endl;
     }
 }
 

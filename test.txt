@@ -1,0 +1,9 @@
+3,3
+StringCell,Hello,0,0
+NumericCell,1.500000,0,1
+StringCell,Goodbye,0,2
+StringCell,!,1,0
+NumericCell,3.500000,1,1
+StringCell,World,1,2
+NumericCell,5.500000,2,1
+StringCell,World,2,2

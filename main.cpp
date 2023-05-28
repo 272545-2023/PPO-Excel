@@ -6,46 +6,42 @@ int main(){
 
     Spreadsheet sheet;
 
-    sheet.setValue(0, 0, "Hello");
-    sheet.setValue(1, 0, "World");
-    sheet.setValue(2, 0, "!");
-    sheet.setValue(0, 1, 1.5);
-    sheet.setValue(1, 1, 2.5);
-    sheet.setValue(2, 1, 3.5);
+    sheet.loadSpreadsheet("test.txt");
+
+    cout << "Jestem" << endl;
 
     sheet.print();
 
-    cout << "______________" << endl;
+    // sheet.setValue(0, 0, "Hello");
+    // sheet.setValue(1, 0, "World");
+    // sheet.setValue(2, 0, "!");
+    // sheet.setValue(0, 1, 1.5);
+    // sheet.setValue(1, 1, 2.5);
+    // sheet.setValue(2, 1, 3.5);
 
+    // sheet.addColumn();
 
-    sheet.addColumn();
+    // sheet.setValue(0, 2, "Goodbye");
 
-    sheet.setValue(0, 2, "Goodbye");
+    // sheet.setValue(1, 2, 4.5);
 
+    // sheet.setValue(2, 2, "World");
 
-    sheet.setValue(1, 2, 4.5);
+    // sheet.addRow();
 
+    // sheet.setValue(3, 1, 5.5);
 
-    sheet.setValue(2, 2, "World");
+    // sheet.setValue(3, 2, "World");
 
+    // sheet.deleteRow(1);
 
-    sheet.addRow();
+    // sheet.print();
 
-cout << "______________" << endl;
+    // cout << "Dotarlem do konca" << endl;
 
-    sheet.setValue(3, 1, 5.5);
+    // cout << "Ekspoertuje do pliku" << endl;
 
-
-    sheet.setValue(3, 2, "World");
-
-    sheet.deleteRow(1);
-
-    cout << "______________" << endl;
-
-
-    sheet.print();
-
-    cout << "Dotarlem do konca" << endl;
+    // sheet.saveSpreadsheet("test.txt");
 
     return 0;
 }

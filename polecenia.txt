@@ -3,6 +3,6 @@ arkusz
 - mozliwosc rozszerzania arkusza (wiersze i kolumny)
 to na 30V
 - wykonywanie operacji na zakresach komorek:
-- - suma i srednia
--odczyt i zapisywanie wartosci z dysku
+- - suma i srednia (jesli liczby to zsumuj, jesli tekst to polacz, jesli typy mieszane powiedz ze nie wolno)
+-odczyt i zapisywanie wartosci z dysku (zapis i odczyt z pliku)
 to na 13VI

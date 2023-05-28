@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <iomanip>
+#include <fstream>
+#include <string>
+#include <sstream>
 #include "NumericCell.h"
 #include "StringCell.h"
 
@@ -90,6 +92,72 @@ class Spreadsheet {
             @return string The type of the cell
         */
         std::string getCellType(int row, int col) const;
+
+        /*
+            A method that returns the sum of a range of cells
+            @param row1 The first row of the range
+            @param col1 The first column of the range
+            @param row2 The second row of the range
+            @param col2 The second column of the range
+            @return The sum of the range
+        */
+        float sum(int row1, int col1, int row2, int col2) const;
+
+        /*
+            A method that returns the average of a range of cells
+            @param row1 The first row of the range
+            @param col1 The first column of the range
+            @param row2 The second row of the range
+            @param col2 The second column of the range
+            @return The average of the range
+        */
+        float average(int row1, int col1, int row2, int col2) const;
+
+        /*
+            A method that returns the maximum of a range of cells
+            @param row1 The first row of the range
+            @param col1 The first column of the range
+            @param row2 The second row of the range
+            @param col2 The second column of the range
+            @return The maximum of the range
+        */
+        float max(int row1, int col1, int row2, int col2) const;
+
+        /*
+            A method that returns the minimum of a range of cells
+            @param row1 The first row of the range
+            @param col1 The first column of the range
+            @param row2 The second row of the range
+            @param col2 The second column of the range
+            @return The minimum of the range
+        */
+        float min(int row1, int col1, int row2, int col2) const;
+
+        /*
+            A method that concatenates a range of cells
+            @param row1 The first row of the range
+            @param col1 The first column of the range
+            @param row2 The second row of the range
+            @param col2 The second column of the range
+            @return The concatenation of the range
+        */
+
+        std::string concatenate(int row1, int col1, int row2, int col2) const;
+
+        /*
+            A method that saves the spreadsheet to a file
+            @param filename The name of the file to save to
+            @return none
+        */
+        void saveSpreadsheet(std::string filename) const;
+
+        /*
+            A method that loads the spreadsheet from a file
+            @param filename The name of the file to load from
+            @return none
+        */
+        void loadSpreadsheet(std::string filename);
+
 
         /*
             Destructor

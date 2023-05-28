@@ -12,6 +12,12 @@ int main(){
 
     sheet.print();
 
+    cout << "Test sumy od 0,1 do 2,2: " << sheet.sum(0, 1, 2, 1) << endl;
+
+    cout << "Test sredniej od 0,1 do 2,2: " << sheet.average(0, 1, 2, 1) << endl;
+
+    cout << "Test konkatenacji od 0,0 do 1,0: " << sheet.concatenate(0, 0, 1, 0) << endl;
+
     // sheet.setValue(0, 0, "Hello");
     // sheet.setValue(1, 0, "World");
     // sheet.setValue(2, 0, "!");
